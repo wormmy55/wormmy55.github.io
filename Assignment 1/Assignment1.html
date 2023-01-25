@@ -1,0 +1,29 @@
+<!DOCTYPE html>     <!--Jonathan Au 300827701-->
+<html>
+    <head>
+        <title>Assignment 1 - 300827701</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="Stylesheet1.css"  rel="stylesheet">
+        
+    </head>
+    <body>
+        <header>
+            <h1>Multiplication Table</h1>
+            <hr>
+            <button onclick="toggle()">Dark Mode</button>
+        </header>
+
+        <div id="myTable"></div>
+        <form onsubmit=" return false">
+            <lable for="rowMax">Number of Rows:</lable><br>
+            <input type="text" id="rowMax" name="rowMax" value="10"><br><br>
+            <lable for="rowMax">Number of Columns:</lable><br>
+            <input type="text" id="colMax" name="colMax" value="10"><br><br>
+            <input type="submit" value="Calculate" onclick="multiTable()">
+        </form>
+
+
+
+        <script src="Assignment1.js" defer></script>
+    </body>
+</html>
