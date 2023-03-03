@@ -4,7 +4,7 @@
       Chapter Case
 
       Application to generate a slide show
-      Author: Jonathan Au - 300827701
+      Author: 300827701
       Date:   2023/03/03
 
       Filename: js05.js
