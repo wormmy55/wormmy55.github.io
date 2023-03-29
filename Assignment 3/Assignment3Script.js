@@ -1,3 +1,11 @@
+/*
+      Author: Jonathan Au - 300827701
+      Date:   2023/03/29
+
+      Filename: Assignment3.html
+*/
+
+
 const gameSpeedDisplay = document.getElementById("GameSpeed");
 const reset_score = document.getElementById("resetScoreBtn");
 const reset_speed = document.getElementById("resetSpeedBtn");
