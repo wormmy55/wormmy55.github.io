@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/stylesheets/style.css"  rel="stylesheet">
+  </head>
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/main_nav.ejs') %>
+   
+<main class="container">
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome to all <%= title %></h1>
+    </div>
+    <div>
+      <h3>Jonathan Au</h3>
+      <img src="/images/My_pictures.jpg" id="imgs">
+      <p>Hello, my name is Jonathan Au, and I am a student at Centennial College. 
+        I am currently studying Artificial Intelligence - Software engineering, 
+        but previously I spent four years in Japan for study.
+        I studied 2 years of Japanese, then another 2 years of Robotics at the Nippon Engineering College of Hachioji. 
+        I have an interest in robotics and Artificial Intelligence in the hopes of one day populating the world with humanoid robots.
+      </p>
+      
+    </div>
+    <embed src="/Documents/resume-2023.pdf" type="application/pdf" id="pdf" rel="Resume">
+      <p>
+        &nbsp; 
+      </p>
+    </main>
+    
+    <!--bottom nav-->
+    
+    <!--script section-->
+    <%- include ('partials/bottom_nav.ejs') %>
+    <%- include ('partials/footer.ejs') %>
+</html>

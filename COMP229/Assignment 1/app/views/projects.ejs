@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/stylesheets/style.css"  rel="stylesheet">
+  </head>
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/main_nav.ejs') %>
+   
+
+<main class="container">
+  <div class="jumbotron">
+    <h1 class="display-4"><%= title %> page</h1>
+    </div>
+    <div>
+      <h2>My projects</h2>
+      <h3>Sumo Project</h3>
+      <img src="/images/Projects/sumo 1.png" id="imgright">
+      <img src="/images/Projects/sumo 2.jpg" id="imgright">
+      <p>
+        One of the projects that I've been a part of was the one that took place while I was in japan.<br>
+        It was a 2 person group, and were designed with creating a sumo robot. <br>
+        The goal of which was to push the robot off the stage.<br>
+        As seen from the photos, I used solidworks to fully flesh out the design of the robot<br>
+        where we would then build, program, and wire it together.<br>
+        We ended up getting 2nd place which was pretty good <br>
+        considering the simplicity of our robot in comparission with other teams.
+      </p>
+
+      <h3>COMP 122 Project</h3>
+      <img src="/images/Projects/COMP 122 ERD.png" id="imgright">
+      <p>
+        Another project that I've worked on is the creation of a database for the database concepts course.<br>
+        My partner and I worked hard to complete this project.<br>
+        The work was split pretty evenly, and the results were quite acceptable. 
+      </p>
+
+      <h3>COMP 225 Project</h3>
+      <img src="/images/Projects/COMP 225 ClassDiagram.jpg" id="imgright">
+      <p>
+        Another project that I've worked on is the creation of a SRS document for class.<br>
+        My partners and I worked pretty hard to complete this project despite it's ambiguity.<br>
+        The work was split evenly, and we got a good grade out of it. 
+      </p>
+    </div>
+    </main>
+    <!--bottom nav-->
+   
+   
+      <!--script section-->
+      <%- include ('partials/bottom_nav.ejs') %>
+      <%- include ('partials/footer.ejs') %>
+</html>

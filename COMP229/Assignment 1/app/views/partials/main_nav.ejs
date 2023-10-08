@@ -1,0 +1,64 @@
+<!--Main Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <link href="/stylesheets/style.css"  rel="stylesheet">
+   
+    <!--<a class="navbar-brand" href="#">COMP229</a>-->
+    <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>-->
+    <img src="/images/logo.png" alt="logo" style: width="100px"; height="100px">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       
+      <b>
+        <ul class="navbar-nav ml-auto">
+
+          <% if (title=="Home") { %>
+        <li class="nav-item active">
+          <% } else { %>
+            <li class="nav-item">
+              <% } %>
+          <a class="nav-link active"  aria-content=page href="/"><i class="fas fa-lg fa-laptop-house"></i> Home </a>
+        </li>
+
+         <% if (title=="About") { %>
+        <li class="nav-item active">
+          <% } else { %>
+            <li class="nav-item">
+              <% } %>
+          <a class="nav-link"  href="/about"><i class="fa-solid fa-profile"></i> About </a>
+        </li>
+
+        <% if (title=="Contact") { %>
+          <li class="nav-item active">
+          <% } else { %>
+        <li class="nav-item">
+          <% } %>
+          <a class="nav-link"  href="/contact"><i class="fa-solid fa-address-book"></i>Contact</a>
+        </li>
+
+         <% if (title=="Product") { %>
+          <li class="nav-item active">
+          <% } else { %>
+        <li class="nav-item">
+          <% } %>
+          <a class="nav-link"  href="/projects"><i class="fa-brands fa-projects"></i>Projects</a>
+        </li>
+
+
+         <%if(title=="Services"){%>
+          <li class="nav-item active">
+          <% } else { %>
+        <li class="nav-item">
+          <% } %>
+          <a class="nav-link"  href="/services"><i class="fa-brands fa-servicestack"></i>Services</a>
+        </li>
+        <li>
+          <button onclick="toggle()" id="darkMode">Too Bright!</button>
+        </li>
+        </ul>
+        </b>
+    </div>
+  </div>
+</nav>
+<script src="/Scripts/dark.js" defer></script>

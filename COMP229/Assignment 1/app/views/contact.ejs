@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/stylesheets/style.css"  rel="stylesheet">
+  </head>
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/main_nav.ejs') %>
+   
+
+<main class="container">
+  <div class="jumbotron">
+    <h1 class="display-4">You're welcome to <%= title %></h1>
+    </div>
+    <div>
+      <h2>Contacts</h2>
+      <p>You can reach me at my E-mail: <a href="mailto:jau29@my.centennialcollege.ca">jau29@my.centennialcollege.ca</a></p>
+    </div>
+    <div>
+      <input type="text" name="First Name" id="First Name" placeholder="John">
+      <input type="text" name="Last Name" id="Last Name" placeholder="Smith">
+      <input type="number" name="Phone#" id="Phone#" placeholder="(123) 456-7890">
+      <input type="text" name="Email" id="Email" placeholder="Smith">
+      <input type="textbox" name="message" id="message" placeholder="message">
+      <button type="submit"><a class="nav-link active"  aria-content=page href="/"><i class="fas fa-lg fa-laptop-house">submit</i></button>
+      
+    </div>
+    </main>
+    
+    <!--bottom nav-->
+    
+   
+   
+      <!--script section-->
+      <%- include ('partials/bottom_nav.ejs') %>
+      <%- include ('partials/footer.ejs') %>
+</html>
