@@ -74,17 +74,6 @@ pca = PCA()
 # Fit train data
 pca.fit(X_train)
 
-#cumsum = np.cumsum(pca.explained_variance_ratio_)
-#d = np.argmax(cumsum >= 0.95) + 1
-#print("d: ", d)
-#Preserve 95% of training set variance
-#pca = PCA(n_components=0.95)
-#X_reduced = pca.fit_transform(X_train)
-
-# Print the explained variance ratio and number of n_components
-#print("n_components = ", pca.n_components_)
-#print("Explained Variance Ratio: ", pca.explained_variance_ratio_.sum())
-
 # number of Principal components
 n_components = 2
 pca = PCA(n_components=n_components)
