@@ -131,6 +131,11 @@ optimizer = tf.keras.optimizers.Nadam(learning_rate=1e-2)
 loss_fn = tf.keras.losses.MeanSquaredError()
 #n_outputs = action_size
 
+env.reset(seed=42)
+np.random.seed(42)
+tf.random.set_seed(42)
+rewards = []
+best_score = 0
 
 replay_buffer = deque(maxlen = memory_size)
 
@@ -218,13 +223,49 @@ def replay():
     target_q_values[0][action] = target
     model.fit(state, target_q_values, epochs=1, verbose=0)
 
+for episode in range(500):
+    #obs, info = env.reset()
+    result = env.reset()
+
+    if not isinstance(result, (tuple, dict)):
+      obs = result
+    elif isinstance(result, tuple):
+      obs = result[0]
+      info = result[1] if len(result) > 1 else {}
+    else:
+      obs = result['observation']
+      info = result.get('info', {})
+
+
+    for step in range(200):
+        epsilon = max(1 - episode / 500, 0.01)
+        obs, reward, done, info = play_one_step(env, obs, epsilon)
+        if done:
+            break
+
+    # extra code – displays debug info, stores data for the next figure, and
+    #              keeps track of the best model weights so far
+    print(f"\rEpisode: {episode + 1}, Steps: {step + 1}, eps: {epsilon:.3f}",
+          end="")
+    rewards.append(step)
+    if step >= best_score:
+        best_weights = model.get_weights()
+        best_score = step
+
+    if episode > 50:
+        training_step(batch_size)
+
+model.set_weights(best_weights)  # extra code – restores the best model weights
+
 """5.	Analyze the agent's learning progress by plotting relevant performance metrics (e.g., cumulative rewards, episode length) over time. <br>[10 points]"""
 
 # Plot results
+plt.figure(figsize=(8, 4))
 plt.plot(rewards)
-plt.xlabel('Episode')
-plt.ylabel('Reward')
-plt.title('Deep Q-Learning Performance')
+plt.xlabel("Episode", fontsize=14)
+plt.ylabel("Rewards", fontsize=14)
+plt.grid(True)
+#save_fig("dqn_rewards_plot")
 plt.show()
 
 """Discuss the challenges faced during training and potential strategies for further improving the agent's performance. <br>[5 points]
